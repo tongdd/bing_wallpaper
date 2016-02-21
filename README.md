@@ -19,4 +19,4 @@ I've included an uninstaller that will remove all of the files, just `sudo chmod
 
 ### Things to note:
 
-This will keep the files stored in ~/Pictures/Bing as they're downloaded. If you want to delete after download, add rm $WALLPAPERS$FILENAME to the bottom of `./bing_wallpaper.sh` before you install.
+This will keep the files stored in ~/Pictures/Bing as they're downloaded. If you want to delete after download, add `rm $WALLPAPERS$FILENAME` to the bottom of `./bing_wallpaper.sh` before you install.
