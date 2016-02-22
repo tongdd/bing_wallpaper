@@ -9,7 +9,7 @@ EXT=".jpg"
 mkdir -p $WALLPAPERS
 
 CALLURL=$BING$(echo $(curl -s $APIURL) | egrep -o "<urlBase>(.*)</urlBase>" | cut -d ">" -f 2 | cut -d "<" -f 1)$RES$EXT
-if wget --quiet --spider "$CALLURL"
+if curl -IL -s "$CALLURL"
 then
     FILENAME=${CALLURL##*/}
     curl -s -o $WALLPAPERS$FILENAME $CALLURL
